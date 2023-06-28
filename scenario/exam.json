@@ -1,0 +1,45 @@
+
+{
+    "exams":[
+    {
+    "name":"Математика",
+    "link":"https://abitur.mtuci.ru/upload/iblock/923/math.gif"
+    },
+    {
+    "name":"Информатика",
+    "link":"https://abitur.mtuci.ru/upload/iblock/cf9/mtuci_informatica.docx"
+    },
+    {
+    "name":"Физика",
+    "link":"https://abitur.mtuci.ru/upload/iblock/5a2/fizika.doc"
+    },
+    {
+    "name":"Обществознание",
+    "link":"https://abitur.mtuci.ru/upload/iblock/315/obsh.doc"
+    },
+    {
+    "name":"Английский язык",
+    "link":"https://abitur.mtuci.ru/upload/iblock/168/mtuci_bilet_english.docx"
+    },
+    {
+    "name":"Немецкий язык",
+    "link":"https://abitur.mtuci.ru/upload/iblock/5bd/mtuci_bilet_deutch.docx"
+    },
+    {
+    "name":"Французский язык",
+    "link":"https://abitur.mtuci.ru/upload/iblock/6c1/mtuci_bilet_french.docx"
+    },
+    {
+    "name":"Основы рекламы",
+    "link":"https://abitur.mtuci.ru/upload/iblock/9b7/Osnovy-reklamy.pdf"
+    },
+    {
+    "name":"Основы экономики",
+    "link":"https://abitur.mtuci.ru/upload/iblock/d66/Programma.VI.Ekonomika_2023.pdf"
+    },
+    {
+    "name":"История",
+    "link":"https://abitur.mtuci.ru/upload/iblock/dcb/history.doc"
+    }
+    ]
+}

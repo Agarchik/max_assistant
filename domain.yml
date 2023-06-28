@@ -1,0 +1,80 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_info
+  - course_info
+  - select_course
+  - PK_location
+  - PK_contact
+  - exams_info
+  - select_exam
+
+actions:
+  - action_show_courses
+  - action_show_course_info
+  - action_show_exams
+  - action_show_exams_info
+
+
+responses:
+  utter_greet:
+  - text: "Вас приветствует персональный ассистент."
+  - text: "Добрый день."
+
+  utter_did_that_help:
+  - text: "Чем я могу вам помочь?"
+    buttons:
+    - payload: /course_info
+      title: "Хочу узнать о направлениях"
+    - payload: /exams_info
+      title: "Хочу узнать о экзаменах"
+    - payload: /PK_contact
+      title: "Хочу позвонить в приёмную комиссию"
+    - payload: /PK_location
+      title: "Хочу прийти в приёмную комиссию"
+    - payload: bot_info
+      title: О боте
+    button_type: reply
+
+  utter_goodbye:
+  - text: "До свидания."
+  - text: "Если вам что-то нужно, не стесняйтесь обращаться."
+
+  utter_iamabot:
+  - text: "Это дипломная работа Агркова Максима на тему 'Разработка диалоговой системы для консультирования клиентов на основе баз знаний и алгоритмов обучения с подкреплением'"
+
+  utter_location:
+  - text: "Приёмная комиссия находится по адресу: Авиамоторная улица, 8с39 \n\n График работы приёмной комиссии \nПонедельник-четверг: с 10:00 до 17:30. \nВ пятницу до 16:30\nСуббота и воскресенье: выходные дни."
+    custom:
+      latitude: 55.755414
+      longitude: 37.714339
+
+  utter_contact:
+  - text: "Тел: +7(495) 673-36-25\nE-mail: pk@mtuci.ru"
+
+  utter_preexam:
+  - text: "Экзамены сдаются 1, 4, 6, 8, 11, 13, 15, 18 июля в 8.30 в дистанционном формате"
+
+slots:
+  course_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+  exam_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  
+
+entities:
+  - course_name
+  - exam_name
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

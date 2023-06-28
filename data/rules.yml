@@ -1,0 +1,50 @@
+version: "3.1"
+
+rules:
+
+- rule: Show courses
+  steps:
+  - intent: course_info
+  - action: action_show_courses
+
+- rule: Handle course selection
+  steps:
+  - intent: select_course
+  - action: action_show_course_info
+
+- rule: Say hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_did_that_help
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say infomation about bot
+  steps:
+  - intent: bot_info
+  - action: utter_iamabot
+
+- rule: show location
+  steps:
+  - intent: PK_location
+  - action: utter_location
+
+- rule: show contact
+  steps:
+  - intent: PK_contact
+  - action: utter_contact
+
+- rule: Show exams
+  steps:
+  - intent: exams_info
+  - action: action_show_exams
+
+- rule: Handle course selection
+  steps:
+  - intent: select_exam
+  - action: utter_preexam
+  - action: action_show_exams_info
