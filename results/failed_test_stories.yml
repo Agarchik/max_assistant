@@ -1,0 +1,15 @@
+version: "3.1"
+stories:
+- story: show more course info (.\tests\test_stories.yml)
+  steps:
+  - intent: show_course_info  # predicted: select_course: Хочу посмотреть про [фундамент](course_name) ингформатику
+  - action: action_show_course_info  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+- story: show and chouse (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_info
+  - action: action_show_courses
+  - intent: select_course  # predicted: select_course: покажи [математику](course_name)
+  - action: action_show_course_info

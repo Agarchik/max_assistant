@@ -1,0 +1,44 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: show more course info
+  steps:
+  - user: |
+      Хочу посмотреть про фундамент ингформатику
+    intent: show_course_info
+  - action: action_show_course_info
+
+- story: loc
+  steps:
+  - user: |
+      Куда топать?
+    intent: location
+  - action: utter_location
+
+- story: Quesstion about bot
+  steps:
+  - user: |
+      Добрый день
+    intent: greet
+  - action: utter_greet
+  - user: |
+      что это?
+    intent: bot_info
+  - action: utter_iamabot
+
+- story: show and chouse
+  steps:
+  - user: |
+      привет
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Хочу о направлениях узнать
+    intent: course_info
+  - action: action_show_courses
+  - user: |
+      покажи математику
+    intent: select_course
+  - action: action_show_course_info
+
